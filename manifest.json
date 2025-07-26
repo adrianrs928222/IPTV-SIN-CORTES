@@ -1,0 +1,16 @@
+{
+  "name": "IPTV 2025-2026",
+  "short_name": "IPTV 25-26",
+  "start_url": "./",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#1e88e5",
+  "description": "IPTV estable sin cortes: canales, fútbol, películas y series HD/UHD. Soporte 24/7. Prueba gratis.",
+  "icons": [
+    {
+      "src": "https://cdn-icons-png.flaticon.com/512/9501/9501052.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
