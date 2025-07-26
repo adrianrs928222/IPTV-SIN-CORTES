@@ -13,14 +13,4 @@
     <priority>1.0</priority>
   </url>
 
-  <!-- Si en el futuro tienes más páginas, las añades así -->
-  <!--
-  <url>
-    <loc>https://adrianrs928222.github.io/IPTV-SIN-CORTES/faq</loc>
-    <lastmod>2025-07-26</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  -->
-
 </urlset>
