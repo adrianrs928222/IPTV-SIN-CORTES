@@ -1,124 +1,72 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>IPTV España 2025 | Fútbol y Canales sin Cortes</title>
+  <meta name="description" content="Más de 20.000 canales IPTV en vivo, películas y series. Fútbol español e internacional en HD/UHD. Sin cortes. Soporte 24/7 por Telegram. 50 €/año. Prueba gratis 30 días." />
+  <meta name="keywords" content="iptv españa 2025, ver fútbol online, iptv sin cortes, canales premium iptv, prueba gratis iptv, iptv telegram españa" />
+  <meta name="author" content="Adrián IPTV" />
+  <link rel="icon" href="https://cdn-icons-png.flaticon.com/512/2721/2721275.png" />
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 text-gray-800 font-sans">
 
-body {
-  background-color: #000;
-  color: #fff;
-  font-family: 'Poppins', sans-serif;
-  text-align: center;
-}
+  <div class="max-w-3xl mx-auto px-4 py-8">
+    <h1 class="text-3xl md:text-4xl font-bold text-center text-blue-600 mb-6">IPTV España 2025 – Fútbol y Canales sin Cortes</h1>
+    
+    <img src="img/imagen.jpg" alt="Vista previa IPTV" class="rounded-lg shadow-lg w-full mb-6" />
+    
+    <div class="text-center space-y-3">
+      <p class="text-lg font-semibold text-green-600">💸 Solo <strong>50 € al año</strong> (12 meses)</p>
+      <p>🎬 Más de <strong>20,000 Canales en Vivo</strong> y <strong>+50,000 Películas y Series</strong></p>
+      <p>📺 Español y Multilenguaje | Deportes, Cine, Series y Más</p>
+      <p>🚀 Calidad SD, HD y UHD | Servidores Estables</p>
+      <p>🎁 Fútbol: LaLiga, Champions, Premier y más</p>
+      <p>🔒 Soporte 24/7 | Prueba Gratuita 30 Días | Sin Permanencia</p>
+    </div>
 
-.container {
-  max-width: 800px;
-  margin: auto;
-  padding: 40px 20px;
-}
+    <div class="mt-6 text-center">
+      <a href="https://t.me/adrianrs9282" target="_blank" class="bg-blue-600 text-white px-6 py-3 rounded-xl text-lg font-semibold hover:bg-blue-700 transition">HABLAR POR TELEGRAM</a>
+    </div>
 
-h1 {
-  font-size: 2.4rem;
-  color: #1e90ff;
-  margin-bottom: 25px;
-}
+    <section class="mt-10">
+      <h2 class="text-2xl font-bold text-gray-800 mb-4">¿Qué es IPTV?</h2>
+      <p class="mb-3">¿Buscas el <strong>mejor servicio IPTV en España en 2025</strong>? Te ofrecemos más de <strong>20.000 canales en vivo</strong>, incluyendo todo el <strong>fútbol nacional e internacional</strong> en HD/UHD, sin cortes ni bloqueos.</p>
+      <p class="mb-3">Compatible con <strong>Smart TV, Fire TV, Android, iPhone</strong> y más. Nuestro sistema es <strong>rápido, estable</strong> y con <strong>soporte personal por Telegram</strong>.</p>
+      <p class="mb-3">Ideal si quieres dejar de pagar el cable tradicional. Sin instalaciones, sin complicaciones.</p>
+    </section>
 
-.main-img {
-  width: 100%;
-  max-width: 400px;
-  border-radius: 10px;
-  margin-bottom: 20px;
-  box-shadow: 0 0 15px rgba(30, 144, 255, 0.5);
-}
+    <section class="mt-10">
+      <h2 class="text-2xl font-bold text-gray-800 mb-4">Preguntas frecuentes</h2>
+      <div class="space-y-4">
+        <div>
+          <h3 class="font-semibold">¿Puedo probar antes de pagar?</h3>
+          <p>Sí, tienes <strong>30 días gratis</strong> sin compromiso.</p>
+        </div>
+        <div>
+          <h3 class="font-semibold">¿Funciona en Smart TV?</h3>
+          <p>Sí, funciona en <strong>Smart TV, Android, Fire TV, iPhone</strong> y más.</p>
+        </div>
+        <div>
+          <h3 class="font-semibold">¿El soporte es rápido?</h3>
+          <p>Sí, atiendo directamente por <a href="https://t.me/adrianrs9282" target="_blank" class="text-blue-600 underline">Telegram 24/7</a>.</p>
+        </div>
+        <div>
+          <h3 class="font-semibold">¿Es legal?</h3>
+          <p>El uso es bajo tu responsabilidad. Ofrecemos acceso a contenido público de forma estable.</p>
+        </div>
+      </div>
+    </section>
+  </div>
 
-.precio {
-  font-size: 1.4rem;
-  margin-bottom: 20px;
-  color: #00ffcc;
-}
+  <!-- Botón flotante de WhatsApp -->
+  <a href="https://wa.me/34642425345?text=Hola%2C%20quiero%20más%20info%20sobre%20el%20IPTV" 
+     class="fixed bottom-5 right-5 z-50"
+     target="_blank"
+     title="WhatsApp">
+    <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="WhatsApp" class="w-14 h-14" />
+  </a>
 
-p {
-  font-size: 1.1rem;
-  margin: 10px 0;
-  line-height: 1.5;
-}
-
-.boton {
-  display: inline-block;
-  background: linear-gradient(45deg, #1e90ff, #1565c0);
-  color: white;
-  padding: 14px 35px;
-  font-size: 1.1rem;
-  font-weight: bold;
-  text-decoration: none;
-  border-radius: 50px;
-  margin-top: 30px;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.boton:hover {
-  transform: scale(1.05);
-  box-shadow: 0 0 15px rgba(30, 144, 255, 0.6);
-}
-
-section {
-  margin-top: 50px;
-  text-align: left;
-}
-
-h2 {
-  font-size: 1.8rem;
-  color: #1e90ff;
-  margin-bottom: 20px;
-}
-
-a {
-  color: #1e90ff;
-  text-decoration: none;
-}
-
-a:hover {
-  text-decoration: underline;
-}
-
-/* WhatsApp flotante */
-.whatsapp-float {
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  z-index: 1000;
-  background-color: #25d366;
-  border-radius: 50%;
-  padding: 10px;
-  box-shadow: 0 4px 6px rgba(0,0,0,0.3);
-  transition: transform 0.3s ease;
-}
-
-.whatsapp-float:hover {
-  transform: scale(1.1);
-}
-
-.whatsapp-float img {
-  width: 40px;
-  height: 40px;
-}
-
-/* Responsive */
-@media (max-width: 600px) {
-  h1 {
-    font-size: 1.8rem;
-  }
-
-  .main-img {
-    max-width: 90%;
-  }
-
-  p {
-    font-size: 1rem;
-  }
-
-  .boton {
-    font-size: 1rem;
-    padding: 12px 25px;
-  }
-}
+</body>
+</html>
