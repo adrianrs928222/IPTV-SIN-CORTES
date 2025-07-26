@@ -1,0 +1,19 @@
+# Permitir a todos los bots rastrear el sitio
+User-agent: *
+Allow: /
+
+# Evitar el rastreo de carpetas internas innecesarias (si las usas en el futuro)
+Disallow: /private/
+Disallow: /admin/
+Disallow: /tmp/
+
+# Evitar que rastreen parámetros que no cambian el contenido
+Disallow: /*?*sort=
+Disallow: /*?*filter=
+Disallow: /*?*utm_source=
+
+# Prioriza el sitemap
+Sitemap: https://adrianrs928222.github.io/IPTV-SIN-CORTES/sitemap.xml
+
+# Indicación de contenido multilenguaje si lo aplicas más adelante
+# (Ahora solo español, pero está listo)
