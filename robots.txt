@@ -1,4 +1,3 @@
 User-agent: *
 Allow: /
-
 Sitemap: https://streamdomus.vercel.app/sitemap.xml
