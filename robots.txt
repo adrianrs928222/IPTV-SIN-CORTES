@@ -1,3 +1,4 @@
 User-agent: *
 Allow: /
-Sitemap: https://iptv-premium-esp.vercel.app/sitemap.xml
+
+Sitemap: https://streamdomus.vercel.app/sitemap.xml
