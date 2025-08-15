@@ -1,58 +1,58 @@
-/* ========================= StreamDomus - Estilos CSS ========================= */
+/* ============================= StreamDomus - CSS Profesional ============================= */
 
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
 
-:root { --primary: #007bff; --dark: #111; --light: #f4f4f4; --accent: #28a745; --font-main: 'Inter', sans-serif; }
+:root { --primary: #ff5a00; --dark: #1b1b1b; --light: #ffffff; --accent: #28a745; --font-main: 'Inter', sans-serif; --highlight: #ffd700; }
 
 body { margin: 0; padding: 0; font-family: var(--font-main); background-color: var(--light); color: var(--dark); line-height: 1.6; }
 
-header { text-align: center; padding: 40px 20px 10px; background: white; }
+header { text-align: center; padding: 60px 20px 20px; background: var(--light); animation: fadeIn 1s ease; }
 
-.main-title { font-size: 2.8rem; font-weight: 700; color: var(--primary); animation: fadeIn 1s ease; }
+.main-title { font-size: 3rem; font-weight: 700; color: var(--primary); }
 
-.tagline { font-size: 1.2rem; margin-top: 10px; animation: fadeInUp 1s ease; }
+.tagline { font-size: 1.3rem; margin-top: 10px; color: #555; }
 
-.cta-section { text-align: center; margin: 20px auto; animation: fadeIn 1.2s ease; }
+.cta-section { text-align: center; margin: 30px auto; animation: fadeInUp 1.2s ease; }
 
-.btn-cta { background: var(--primary); color: white; padding: 14px 30px; border-radius: 30px; font-size: 1.1rem; text-decoration: none; font-weight: bold; transition: 0.3s; }
+.btn-cta { background: var(--primary); color: white; padding: 16px 36px; border-radius: 50px; font-size: 1.2rem; text-decoration: none; font-weight: bold; transition: 0.3s; box-shadow: 0 6px 20px rgba(0,0,0,0.2); }
 
-.btn-cta:hover { background: #0056b3; }
+.btn-cta:hover { background: #e04800; transform: scale(1.05); }
 
-.price { margin-top: 10px; font-weight: 600; color: #444; }
+.price { margin-top: 15px; font-weight: 600; color: #333; }
 
-.features { max-width: 800px; margin: 40px auto; background: white; padding: 20px; border-radius: 12px; box-shadow: 0 0 20px rgba(0,0,0,0.05); animation: fadeInUp 1.2s ease; }
+.features { max-width: 800px; margin: 40px auto; background: #fafafa; padding: 30px; border-radius: 16px; box-shadow: 0 4px 25px rgba(0,0,0,0.06); }
 
-.features h2 { text-align: center; color: var(--primary); font-size: 2rem; margin-bottom: 20px; }
+.features h2 { text-align: center; color: var(--primary); font-size: 2.2rem; margin-bottom: 25px; }
 
-.features ul { list-style: none; padding: 0; font-size: 1rem; line-height: 1.8; }
+.features ul { list-style: none; padding: 0; font-size: 1.05rem; line-height: 1.8; }
 
-.features li { padding-left: 20px; position: relative; }
+.features li { padding-left: 24px; position: relative; margin-bottom: 10px; }
 
 .features li::before { content: '✔'; color: var(--accent); position: absolute; left: 0; }
 
-.contact-links { margin-top: 20px; display: flex; gap: 20px; justify-content: center; }
+.contact-links { margin-top: 30px; display: flex; gap: 20px; justify-content: center; flex-wrap: wrap; }
 
-.contact-links a { color: var(--primary); font-weight: 600; text-decoration: none; }
+.contact-links a { color: var(--primary); font-weight: 600; text-decoration: none; font-size: 1rem; }
 
-.faq { max-width: 800px; margin: 40px auto; padding: 20px; background: #fff; border-radius: 12px; box-shadow: 0 0 20px rgba(0,0,0,0.05); }
+.faq { max-width: 800px; margin: 50px auto; padding: 25px; background: #fff; border-radius: 14px; box-shadow: 0 0 15px rgba(0,0,0,0.05); }
 
-.faq h2 { text-align: center; color: var(--primary); }
+.faq h2 { text-align: center; color: var(--primary); font-size: 1.8rem; }
 
-.faq details { margin: 10px 0; font-weight: 500; }
+.faq details { margin: 15px 0; font-weight: 500; cursor: pointer; }
 
-footer { text-align: center; margin: 40px 0; font-size: 0.9rem; }
+footer { text-align: center; margin: 40px 0 20px; font-size: 0.9rem; }
 
-footer a { color: var(--primary); margin: 0 8px; text-decoration: none; }
+footer a { color: var(--primary); margin: 0 10px; text-decoration: none; }
 
 .whatsapp-float { position: fixed; bottom: 20px; right: 20px; z-index: 999; animation: fadeIn 1.4s ease; }
 
-.whatsapp-float img { width: 48px; height: 48px; transition: transform 0.3s; }
+.whatsapp-float img { width: 50px; height: 50px; transition: transform 0.3s; }
 
-.whatsapp-float:hover img { transform: scale(1.1); }
+.whatsapp-float:hover img { transform: scale(1.15); }
 
 /* Animaciones */ @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
 
 @keyframes fadeInUp { from { opacity: 0; transform: translateY(30px); } to { opacity: 1; transform: translateY(0); } }
 
-/* Responsive */ @media (max-width: 768px) { .main-title { font-size: 2rem; } .features, .faq { padding: 15px; } .btn-cta { font-size: 1rem; padding: 10px 20px; } }
+/* Responsive */ @media (max-width: 768px) { .main-title { font-size: 2.2rem; } .tagline { font-size: 1rem; } .features, .faq { padding: 20px; } .btn-cta { font-size: 1rem; padding: 12px 24px; } }
 
