@@ -1,8 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url><loc>https://iptv-premium-esp.vercel.app/</loc></url>
-  <url><loc>https://iptv-premium-esp.vercel.app/#beneficios</loc></url>
-  <url><loc>https://iptv-premium-esp.vercel.app/#planes</loc></url>
-  <url><loc>https://iptv-premium-esp.vercel.app/#faq</loc></url>
-  <url><loc>https://iptv-premium-esp.vercel.app/#contacto</loc></url>
+  <url>
+    <loc>https://iptv-premium-esp.vercel.app/</loc>
+  </url>
 </urlset>
