@@ -1,33 +1,114 @@
-{
-  "cleanUrls": true,
-  "trailingSlash": false,
-  "headers": [
-    {
-      "source": "/sitemap.xml",
-      "headers": [
-        {
-          "key": "Content-Type",
-          "value": "application/xml"
-        }
-      ]
-    },
-    {
-      "source": "/robots.txt",
-      "headers": [
-        {
-          "key": "Content-Type",
-          "value": "text/plain"
-        }
-      ]
-    },
-    {
-      "source": "/(.*)",
-      "headers": [
-        {
-          "key": "Cache-Control",
-          "value": "public, max-age=0, must-revalidate"
-        }
-      ]
-    }
-  ]
+:root {
+  --bg: #ffffff;
+  --text: #111111;
+  --muted: #666666;
+  --accent: #2c7ef8;
+  --radius: 16px;
+  --container: 1100px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: var(--bg);
+  color: var(--text);
+  line-height: 1.6;
+  animation: fadeIn 0.7s ease-in-out;
+  padding: 20px;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+header, .highlight, .faq, footer {
+  max-width: var(--container);
+  margin: auto;
+  padding: 2em;
+  border-bottom: 1px solid #eee;
+}
+
+h1, h2, h3 {
+  text-align: center;
+  font-weight: 700;
+  margin-bottom: 1em;
+  color: var(--accent);
+}
+
+p {
+  text-align: center;
+  margin-bottom: 1em;
+  font-size: 1.1em;
+  font-weight: 400;
+}
+
+ul {
+  list-style: none;
+  margin: 1em 0;
+  padding: 0;
+}
+
+ul li {
+  padding: 0.5em 0;
+  font-weight: 600;
+}
+
+.btn {
+  display: inline-block;
+  background-color: var(--accent);
+  color: #fff;
+  text-decoration: none;
+  padding: 0.9em 1.6em;
+  margin: 1em 0.5em;
+  border-radius: var(--radius);
+  font-weight: 700;
+  transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #1a5fd4;
+}
+
+.faq summary {
+  font-weight: 600;
+  cursor: pointer;
+  padding: 0.8em;
+  background: #f9f9f9;
+  border: 1px solid #ddd;
+  margin-bottom: 0.5em;
+  border-radius: var(--radius);
+}
+
+.faq p {
+  margin: 0.5em 0 1em 1em;
+  color: var(--muted);
+}
+
+footer {
+  text-align: center;
+  font-size: 0.9em;
+  padding-bottom: 2em;
+}
+
+footer a {
+  color: var(--muted);
+  margin: 0 10px;
+  text-decoration: none;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
+.whatsapp-float {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 999;
 }
