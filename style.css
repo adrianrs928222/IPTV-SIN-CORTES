@@ -1,5 +1,3 @@
-/* style.css */
-
 :root {
   --primary: #ff5a00;
   --accent: #ff9f1c;
@@ -35,16 +33,20 @@ header {
   color: var(--muted);
 }
 
-.hero-image {
-  max-width: 90%;
-  margin-top: 1.5rem;
+.btn-cta {
+  display: inline-block;
+  background-color: var(--primary);
+  color: white;
+  padding: 0.8rem 1.5rem;
   border-radius: var(--radius);
-  box-shadow: var(--shadow);
+  text-decoration: none;
+  font-weight: bold;
+  transition: background 0.3s ease;
+  margin-top: 1rem;
 }
 
-.cta-section {
-  text-align: center;
-  padding: 2rem 1rem;
+.btn-cta:hover {
+  background-color: #e04e00;
 }
 
 .highlight-price {
@@ -56,28 +58,7 @@ header {
   font-weight: bold;
   font-size: 1.2rem;
   box-shadow: var(--shadow);
-  margin-bottom: 1rem;
-}
-
-.btn-cta {
-  display: inline-block;
-  background-color: var(--primary);
-  color: white;
-  padding: 0.8rem 1.5rem;
-  border-radius: var(--radius);
-  text-decoration: none;
-  font-weight: bold;
-  transition: background 0.3s ease;
-}
-
-.btn-cta:hover {
-  background-color: #e04e00;
-}
-
-.price-note {
-  font-size: 0.95rem;
-  margin-top: 0.8rem;
-  color: var(--muted);
+  margin-top: 1rem;
 }
 
 .features, .faq {
@@ -104,19 +85,6 @@ header {
   margin-bottom: 0.5rem;
 }
 
-.contact-links {
-  text-align: center;
-  margin-top: 1rem;
-}
-
-.contact-links a {
-  display: inline-block;
-  margin: 0 0.5rem;
-  color: var(--primary);
-  font-weight: bold;
-  text-decoration: none;
-}
-
 .faq details {
   margin-bottom: 1rem;
 }
@@ -128,9 +96,37 @@ footer {
   font-size: 0.9rem;
 }
 
+.contact-links a {
+  display: inline-block;
+  margin: 0 0.5rem;
+  color: var(--primary);
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.contact-links a:hover {
+  text-decoration: underline;
+}
+
+/* WhatsApp flotante */
 .whatsapp-float {
   position: fixed;
   bottom: 16px;
   right: 16px;
+  background-color: #25d366;
+  padding: 10px;
+  border-radius: 50%;
+  box-shadow: var(--shadow);
   z-index: 999;
+  transition: transform 0.3s ease;
+}
+
+.whatsapp-float:hover {
+  transform: scale(1.1);
+}
+
+.whatsapp-float img {
+  display: block;
+  width: 50px;
+  height: 50px;
 }
