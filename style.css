@@ -11,9 +11,11 @@ html {
 
 body {
   font-family: 'Arial', sans-serif;
-  background-color: #f9f9f9;
-  color: #333;
+  background-color: #f9f9f9; /* Fondo de página claro */
+  color: #333; /* Texto principal en gris oscuro */
   line-height: 1.6;
+  padding: 0;
+  margin: 0;
 }
 
 /* Contenedor */
@@ -30,16 +32,23 @@ body {
   color: white;
   padding: 5rem 2rem;
   text-align: center;
+  position: relative;
+  animation: parallax 10s linear infinite; /* Efecto parallax */
 }
 
 .hero h1 {
   font-size: 3rem;
   margin-bottom: 1rem;
+  opacity: 0;
+  animation: fadeIn 1s ease-out forwards; /* Animación de entrada */
 }
 
 .hero p {
   font-size: 1.2rem;
   margin-bottom: 2rem;
+  opacity: 0;
+  animation: fadeIn 1.5s ease-out forwards;
+  animation-delay: 0.3s;
 }
 
 .hero .btn-primary {
@@ -49,17 +58,42 @@ body {
   border-radius: 50px;
   font-weight: bold;
   text-decoration: none;
-  transition: background 0.3s ease;
+  transition: background 0.3s ease, transform 0.3s ease;
 }
 
 .hero .btn-primary:hover {
   background-color: #005f42;
+  transform: scale(1.1); /* Efecto de escala en hover */
+}
+
+/* Animación de fade y slide */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes parallax {
+  0% {
+    background-position: 50% 0%;
+  }
+  100% {
+    background-position: 50% 100%;
+  }
 }
 
 /* Sección de Características */
 .features {
   background-color: #fff;
   padding: 3rem 2rem;
+  opacity: 0;
+  animation: fadeIn 1.5s ease-out forwards;
+  animation-delay: 1s;
 }
 
 .features h2 {
@@ -87,13 +121,16 @@ body {
   position: absolute;
   left: 0;
   top: 0;
-  color: #00d084;
+  color: #00d084; /* Verde brillante */
 }
 
 /* Testimonios */
 .testimonials {
   background-color: #f7f7f7;
   padding: 3rem 2rem;
+  opacity: 0;
+  animation: fadeIn 1.5s ease-out forwards;
+  animation-delay: 1.5s;
 }
 
 .testimonials h2 {
@@ -108,6 +145,9 @@ body {
   margin: 1.5rem 0;
   border-radius: 8px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  opacity: 0;
+  animation: fadeIn 1.5s ease-out forwards;
 }
 
 .testimonial p {
@@ -119,11 +159,19 @@ body {
   font-weight: bold;
 }
 
-/* Llamada a la Acción */
+.testimonial:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Llamada a la Acción (CTA) */
 .cta {
   background-color: #00d084;
   color: #fff;
   padding: 3rem 2rem;
+  opacity: 0;
+  animation: fadeIn 1.5s ease-out forwards;
+  animation-delay: 2s;
 }
 
 .cta h2 {
@@ -138,18 +186,22 @@ body {
   border-radius: 50px;
   font-weight: bold;
   text-decoration: none;
-  transition: background 0.3s ease;
+  transition: background 0.3s ease, transform 0.3s ease;
 }
 
 .cta .btn-primary:hover {
   background-color: #00b373;
   color: white;
+  transform: scale(1.1);
 }
 
 /* Blog */
 .blog {
   padding: 3rem 2rem;
   background-color: #fff;
+  opacity: 0;
+  animation: fadeIn 1.5s ease-out forwards;
+  animation-delay: 2.5s;
 }
 
 .blog h2 {
@@ -171,6 +223,7 @@ body {
 .blog a {
   color: #00aaff;
   text-decoration: none;
+  transition: color 0.3s ease;
 }
 
 .blog a:hover {
@@ -199,7 +252,7 @@ footer a:hover {
   text-decoration: underline;
 }
 
-/* WhatsApp Button */
+/* Botón flotante de WhatsApp */
 .whatsapp-float {
   position: fixed;
   bottom: 20px;
@@ -221,17 +274,29 @@ footer a:hover {
   transform: scale(1.1);
 }
 
-/* Responsive Design */
-@media (max-width: 768px) {
-  .hero h1 {
-    font-size: 2rem;
+/* Animación de fade y slide para el footer */
+@keyframes slideIn {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
   }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
 
-  .features h2, .testimonials h2, .cta h2, .blog h2 {
-    font-size: 2rem;
-  }
+footer {
+  animation: slideIn 1s ease-out forwards;
+  opacity: 0;
+  animation-delay: 3s;
+}
 
-  .cta .btn-primary {
-    padding: 1rem 2rem;
-  }
+/* Animación de las tarjetas de testimonios */
+.testimonial:nth-child(1) {
+  animation-delay: 1s;
+}
+
+.testimonial:nth-child(2) {
+  animation-delay: 1.2s;
 }
