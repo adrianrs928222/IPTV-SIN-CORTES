@@ -11,8 +11,8 @@ html {
 
 body {
   font-family: 'Arial', sans-serif;
-  background-color: #f9f9f9; /* Fondo de página claro */
-  color: #333; /* Texto principal en gris oscuro */
+  background-color: #f9f9f9;
+  color: #333;
   line-height: 1.6;
   padding: 0;
   margin: 0;
@@ -28,23 +28,23 @@ body {
 
 /* Hero Section */
 .hero {
-  background: linear-gradient(to right, #00d084, #007b58);
+  background: linear-gradient(135deg, #ff8c00, #ff6347); /* Fondo vibrante */
   color: white;
   padding: 5rem 2rem;
   text-align: center;
   position: relative;
-  animation: parallax 10s linear infinite; /* Efecto parallax */
+  animation: backgroundAnimate 10s infinite linear; /* Efecto de fondo animado */
 }
 
 .hero h1 {
-  font-size: 3rem;
+  font-size: 3.5rem;
   margin-bottom: 1rem;
   opacity: 0;
-  animation: fadeIn 1s ease-out forwards; /* Animación de entrada */
+  animation: fadeIn 1s ease-out forwards;
 }
 
 .hero p {
-  font-size: 1.2rem;
+  font-size: 1.4rem;
   margin-bottom: 2rem;
   opacity: 0;
   animation: fadeIn 1.5s ease-out forwards;
@@ -53,7 +53,7 @@ body {
 
 .hero .btn-primary {
   padding: 1rem 2.5rem;
-  background-color: #007b58;
+  background-color: #ff6347; /* Rojo tomate */
   color: white;
   border-radius: 50px;
   font-weight: bold;
@@ -62,11 +62,24 @@ body {
 }
 
 .hero .btn-primary:hover {
-  background-color: #005f42;
-  transform: scale(1.1); /* Efecto de escala en hover */
+  background-color: #ff4500; /* Rojo oscuro */
+  transform: scale(1.1);
 }
 
-/* Animación de fade y slide */
+/* Animación de fondo en Hero */
+@keyframes backgroundAnimate {
+  0% {
+    background: linear-gradient(135deg, #ff8c00, #ff6347);
+  }
+  50% {
+    background: linear-gradient(135deg, #00d084, #007b58);
+  }
+  100% {
+    background: linear-gradient(135deg, #ff8c00, #ff6347);
+  }
+}
+
+/* Animación de fade in */
 @keyframes fadeIn {
   0% {
     opacity: 0;
@@ -75,15 +88,6 @@ body {
   100% {
     opacity: 1;
     transform: translateY(0);
-  }
-}
-
-@keyframes parallax {
-  0% {
-    background-position: 50% 0%;
-  }
-  100% {
-    background-position: 50% 100%;
   }
 }
 
@@ -99,7 +103,7 @@ body {
 .features h2 {
   font-size: 2.5rem;
   margin-bottom: 1.5rem;
-  color: #007b58;
+  color: #ff6347; /* Rojo tomate */
 }
 
 .features ul {
@@ -121,7 +125,7 @@ body {
   position: absolute;
   left: 0;
   top: 0;
-  color: #00d084; /* Verde brillante */
+  color: #ff6347; /* Rojo tomate */
 }
 
 /* Testimonios */
@@ -136,7 +140,7 @@ body {
 .testimonials h2 {
   font-size: 2rem;
   margin-bottom: 1.5rem;
-  color: #007b58;
+  color: #ff6347; /* Rojo tomate */
 }
 
 .testimonial {
@@ -146,8 +150,6 @@ body {
   border-radius: 8px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
-  opacity: 0;
-  animation: fadeIn 1.5s ease-out forwards;
 }
 
 .testimonial p {
@@ -166,7 +168,7 @@ body {
 
 /* Llamada a la Acción (CTA) */
 .cta {
-  background-color: #00d084;
+  background-color: #ff6347; /* Rojo tomate */
   color: #fff;
   padding: 3rem 2rem;
   opacity: 0;
@@ -182,7 +184,7 @@ body {
 .cta .btn-primary {
   padding: 1rem 2.5rem;
   background-color: #fff;
-  color: #00d084;
+  color: #ff6347; /* Rojo tomate */
   border-radius: 50px;
   font-weight: bold;
   text-decoration: none;
@@ -190,7 +192,7 @@ body {
 }
 
 .cta .btn-primary:hover {
-  background-color: #00b373;
+  background-color: #ff4500; /* Rojo oscuro */
   color: white;
   transform: scale(1.1);
 }
@@ -207,7 +209,7 @@ body {
 .blog h2 {
   font-size: 2.5rem;
   margin-bottom: 1.5rem;
-  color: #007b58;
+  color: #ff6347; /* Rojo tomate */
 }
 
 .blog ul {
@@ -221,13 +223,13 @@ body {
 }
 
 .blog a {
-  color: #00aaff;
+  color: #ff6347; /* Rojo tomate */
   text-decoration: none;
   transition: color 0.3s ease;
 }
 
 .blog a:hover {
-  color: #005fcc;
+  color: #ff4500; /* Rojo oscuro */
   text-decoration: underline;
 }
 
@@ -272,31 +274,4 @@ footer a:hover {
 
 .whatsapp-float:hover img {
   transform: scale(1.1);
-}
-
-/* Animación de fade y slide para el footer */
-@keyframes slideIn {
-  0% {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-footer {
-  animation: slideIn 1s ease-out forwards;
-  opacity: 0;
-  animation-delay: 3s;
-}
-
-/* Animación de las tarjetas de testimonios */
-.testimonial:nth-child(1) {
-  animation-delay: 1s;
-}
-
-.testimonial:nth-child(2) {
-  animation-delay: 1.2s;
 }
