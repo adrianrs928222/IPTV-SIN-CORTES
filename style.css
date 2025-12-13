@@ -1,266 +1,161 @@
-/* Reset básico para mejorar consistencia en todos los navegadores */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+/* Animación de entrada suave (fade in) para las secciones */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
-html {
-  font-size: 16px;
+/* Aplicación de la animación de entrada suave */
+.hero,
+.features,
+.testimonials,
+.cta,
+.blog {
+  animation: fadeIn 1s ease-out forwards;
+  opacity: 0;
 }
 
-body {
-  font-family: 'Arial', sans-serif;
-  background-color: #f9f9f9;
-  color: #333;
-  line-height: 1.6;
-  padding: 0;
-  margin: 0;
+.hero {
+  animation-delay: 0.2s;
 }
 
-/* Estilo para el contenedor central */
-.container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+.features {
+  animation-delay: 0.4s;
 }
 
-/* Encabezado hero */
+.testimonials {
+  animation-delay: 0.6s;
+}
+
+.cta {
+  animation-delay: 0.8s;
+}
+
+.blog {
+  animation-delay: 1s;
+}
+
+/* Animación de hover para botones (escala y cambio de color) */
+@keyframes buttonHover {
+  0% {
+    transform: scale(1);
+    background-color: #00d084;
+  }
+  100% {
+    transform: scale(1.1);
+    background-color: #00b373;
+  }
+}
+
+.hero .btn-primary:hover,
+.cta .btn-primary:hover {
+  animation: buttonHover 0.3s forwards;
+}
+
+/* Animación de hover para las imágenes del testimonio */
+.testimonial img {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.testimonial:hover img {
+  transform: scale(1.05);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Animación de desplazamiento para el WhatsApp flotante */
+@keyframes floatWhatsApp {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.whatsapp-float {
+  animation: floatWhatsApp 2s infinite ease-in-out;
+}
+
+/* Animación de desplazamiento de las imágenes de fondo */
+@keyframes parallax {
+  0% {
+    background-position: 50% 0%;
+  }
+  100% {
+    background-position: 50% 100%;
+  }
+}
+
 .hero {
   background: linear-gradient(to right, #2c2c2c, #000);
-  color: #fff;
-  padding: 5rem 2rem;
-  text-align: center;
+  background-size: 100% 200%;
+  animation: parallax 10s linear infinite;
 }
 
-.hero h1 {
-  font-size: 3rem;
-  margin-bottom: 1rem;
-}
-
-.hero p {
-  font-size: 1.2rem;
-  margin-bottom: 2rem;
-}
-
-.hero .btn-primary {
-  padding: 1rem 2.5rem;
-  background-color: #00d084;
-  color: white;
-  border-radius: 50px;
-  font-weight: bold;
-  transition: background 0.3s ease;
-}
-
-.hero .btn-primary:hover {
-  background-color: #00b373;
-}
-
-/* Estilo para la sección de características */
-.features {
-  background-color: #fff;
-  padding: 3rem 2rem;
-}
-
-.features h2 {
-  font-size: 2.5rem;
-  margin-bottom: 1.5rem;
-}
-
-.features ul {
-  list-style: none;
-  text-align: left;
-  max-width: 600px;
-  margin: 0 auto;
-}
-
-.features li {
-  font-size: 1.1rem;
-  margin: 1rem 0;
-  padding-left: 1.5rem;
-  position: relative;
-}
-
-.features li::before {
-  content: "✔️";
-  position: absolute;
-  left: 0;
-  top: 0;
-}
-
-/* Estilo para los testimonios */
-.testimonials {
-  background-color: #f7f7f7;
-  padding: 3rem 2rem;
-}
-
-.testimonials h2 {
-  font-size: 2rem;
-  margin-bottom: 1.5rem;
-}
-
-.testimonial {
-  background-color: #fff;
-  padding: 1.5rem;
-  margin: 1.5rem 0;
-  border-radius: 8px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-}
-
-.testimonial p {
-  font-style: italic;
-  margin-bottom: 1rem;
-}
-
-.testimonial strong {
-  font-weight: bold;
-}
-
-/* Estilo para la sección de llamada a la acción (CTA) */
-.cta {
-  background-color: #00d084;
-  color: #fff;
-  padding: 3rem 2rem;
-}
-
-.cta h2 {
-  font-size: 2.5rem;
-  margin-bottom: 1.5rem;
-}
-
-.cta .btn-primary {
-  padding: 1rem 2.5rem;
-  background-color: #fff;
-  color: #00d084;
-  border-radius: 50px;
-  font-weight: bold;
-  transition: background 0.3s ease;
-}
-
-.cta .btn-primary:hover {
-  background-color: #00b373;
-  color: white;
-}
-
-/* Blog (escalable con más contenido) */
-.blog {
-  padding: 3rem 2rem;
-  background-color: #fff;
-}
-
-.blog h2 {
-  font-size: 2.5rem;
-  margin-bottom: 1.5rem;
-}
-
-.blog ul {
-  list-style: none;
-  padding: 0;
-}
-
-.blog li {
-  font-size: 1.2rem;
-  margin-bottom: 1rem;
-}
-
+/* Animación de cambio de color en enlaces */
 .blog a {
-  color: #00d084;
-  text-decoration: none;
+  transition: color 0.3s ease;
 }
 
 .blog a:hover {
+  color: #005fcc;
   text-decoration: underline;
 }
 
-/* Estilo para el pie de página */
-footer {
-  background-color: #222;
-  color: #ccc;
-  padding: 2rem 0;
-  text-align: center;
+/* Animación de las tarjetas de testimonio */
+.testimonial {
+  animation: fadeIn 1s ease-out forwards;
+  opacity: 0;
 }
 
-footer p {
-  margin: 0.5rem 0;
+.testimonial:nth-child(1) {
+  animation-delay: 1.2s;
 }
 
-footer a {
-  color: #ccc;
-  text-decoration: none;
+.testimonial:nth-child(2) {
+  animation-delay: 1.4s;
 }
 
-footer a:hover {
-  text-decoration: underline;
-}
-
-/* Botón flotante de WhatsApp */
-.whatsapp-float {
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  width: 60px;
-  height: 60px;
-  z-index: 999;
-}
-
-.whatsapp-float img {
-  width: 100%;
-  height: auto;
-  border-radius: 50%;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
-  transition: transform 0.3s ease;
-}
-
-.whatsapp-float:hover img {
-  transform: scale(1.1);
-}
-
-/* Media Queries para móvil y tabletas */
-@media (max-width: 768px) {
-  .hero h1 {
-    font-size: 2.5rem;
+/* Animación de los encabezados (entrada desde abajo) */
+@keyframes slideIn {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
   }
-
-  .hero p {
-    font-size: 1rem;
-  }
-
-  .features h2 {
-    font-size: 2rem;
-  }
-
-  .cta h2 {
-    font-size: 2rem;
-  }
-
-  .blog h2 {
-    font-size: 2rem;
-  }
-
-  .testimonial {
-    font-size: 1rem;
-  }
-
-  .btn-primary, .btn-secondary {
-    padding: 1rem 2rem;
+  100% {
+    opacity: 1;
+    transform: translateY(0);
   }
 }
 
-@media (max-width: 480px) {
-  .container {
-    padding: 1rem;
-  }
+.features h2,
+.testimonials h2,
+.cta h2,
+.blog h2 {
+  animation: slideIn 1s ease-out forwards;
+  opacity: 0;
+}
 
-  .hero h1 {
-    font-size: 2rem;
-  }
+.features h2 {
+  animation-delay: 0.2s;
+}
 
-  .hero p {
-    font-size: 0.9rem;
-  }
+.testimonials h2 {
+  animation-delay: 0.4s;
+}
 
-  .cta h2 {
-    font-size: 1.8rem;
-  }
+.cta h2 {
+  animation-delay: 0.6s;
+}
+
+.blog h2 {
+  animation-delay: 0.8s;
 }
