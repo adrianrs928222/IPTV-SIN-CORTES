@@ -1,277 +1,107 @@
-/* Reset básico para mejorar consistencia en todos los navegadores */
+/* Reset básico */
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-html {
-  font-size: 16px;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 body {
-  font-family: 'Arial', sans-serif;
-  background-color: #f9f9f9;
-  color: #333;
-  line-height: 1.6;
-  padding: 0;
-  margin: 0;
+    font-family: 'Roboto', sans-serif;
+    background-color: #0d0d0d;
+    color: #fff;
+    overflow-x: hidden;
 }
 
-/* Contenedor */
+h1, h2, p {
+    text-align: center;
+    margin: 20px 0;
+}
+
+header {
+    background-color: #1a1a1a;
+    padding: 40px 0;
+}
+
 .container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
-/* Hero Section */
-.hero {
-  background: linear-gradient(135deg, #ff8c00, #ff6347); /* Fondo vibrante */
-  color: white;
-  padding: 5rem 2rem;
-  text-align: center;
-  position: relative;
-  animation: backgroundAnimate 10s infinite linear; /* Efecto de fondo animado */
+/* Video Contenedor */
+.video-container {
+    width: 100%;
+    height: 500px;
+    background-color: #222;
+    margin: 40px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-.hero h1 {
-  font-size: 3.5rem;
-  margin-bottom: 1rem;
-  opacity: 0;
-  animation: fadeIn 1s ease-out forwards;
+iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
 }
 
-.hero p {
-  font-size: 1.4rem;
-  margin-bottom: 2rem;
-  opacity: 0;
-  animation: fadeIn 1.5s ease-out forwards;
-  animation-delay: 0.3s;
+/* Botones flotantes */
+.button-floating {
+    position: fixed;
+    z-index: 1000;
+    bottom: 20px;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: transform 0.3s ease-in-out;
 }
 
-.hero .btn-primary {
-  padding: 1rem 2.5rem;
-  background-color: #ff6347; /* Rojo tomate */
-  color: white;
-  border-radius: 50px;
-  font-weight: bold;
-  text-decoration: none;
-  transition: background 0.3s ease, transform 0.3s ease;
+.whatsapp {
+    background-color: #25D366;
+    right: 20px;
 }
 
-.hero .btn-primary:hover {
-  background-color: #ff4500; /* Rojo oscuro */
-  transform: scale(1.1);
+.telegram {
+    background-color: #0088cc;
+    left: 20px;
 }
 
-/* Animación de fondo en Hero */
-@keyframes backgroundAnimate {
-  0% {
-    background: linear-gradient(135deg, #ff8c00, #ff6347);
-  }
-  50% {
-    background: linear-gradient(135deg, #00d084, #007b58);
-  }
-  100% {
-    background: linear-gradient(135deg, #ff8c00, #ff6347);
-  }
+.button-floating:hover {
+    transform: scale(1.1);
 }
 
-/* Animación de fade in */
+.button-floating a {
+    color: #fff;
+    font-size: 30px;
+    text-decoration: none;
+}
+
+/* Animación de entrada */
 @keyframes fadeIn {
-  0% {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-  }
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
-/* Sección de Características */
-.features {
-  background-color: #fff;
-  padding: 3rem 2rem;
-  opacity: 0;
-  animation: fadeIn 1.5s ease-out forwards;
-  animation-delay: 1s;
+header, .video-container, .button-floating {
+    animation: fadeIn 1s ease-out;
 }
 
-.features h2 {
-  font-size: 2.5rem;
-  margin-bottom: 1.5rem;
-  color: #ff6347; /* Rojo tomate */
-}
-
-.features ul {
-  list-style: none;
-  text-align: left;
-  max-width: 600px;
-  margin: 0 auto;
-}
-
-.features li {
-  font-size: 1.2rem;
-  margin: 1rem 0;
-  padding-left: 1.5rem;
-  position: relative;
-}
-
-.features li::before {
-  content: "✔️";
-  position: absolute;
-  left: 0;
-  top: 0;
-  color: #ff6347; /* Rojo tomate */
-}
-
-/* Testimonios */
-.testimonials {
-  background-color: #f7f7f7;
-  padding: 3rem 2rem;
-  opacity: 0;
-  animation: fadeIn 1.5s ease-out forwards;
-  animation-delay: 1.5s;
-}
-
-.testimonials h2 {
-  font-size: 2rem;
-  margin-bottom: 1.5rem;
-  color: #ff6347; /* Rojo tomate */
-}
-
-.testimonial {
-  background-color: #fff;
-  padding: 1.5rem;
-  margin: 1.5rem 0;
-  border-radius: 8px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.testimonial p {
-  font-style: italic;
-  margin-bottom: 1rem;
-}
-
-.testimonial strong {
-  font-weight: bold;
-}
-
-.testimonial:hover {
-  transform: scale(1.05);
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
-}
-
-/* Llamada a la Acción (CTA) */
-.cta {
-  background-color: #ff6347; /* Rojo tomate */
-  color: #fff;
-  padding: 3rem 2rem;
-  opacity: 0;
-  animation: fadeIn 1.5s ease-out forwards;
-  animation-delay: 2s;
-}
-
-.cta h2 {
-  font-size: 2.5rem;
-  margin-bottom: 1.5rem;
-}
-
-.cta .btn-primary {
-  padding: 1rem 2.5rem;
-  background-color: #fff;
-  color: #ff6347; /* Rojo tomate */
-  border-radius: 50px;
-  font-weight: bold;
-  text-decoration: none;
-  transition: background 0.3s ease, transform 0.3s ease;
-}
-
-.cta .btn-primary:hover {
-  background-color: #ff4500; /* Rojo oscuro */
-  color: white;
-  transform: scale(1.1);
-}
-
-/* Blog */
-.blog {
-  padding: 3rem 2rem;
-  background-color: #fff;
-  opacity: 0;
-  animation: fadeIn 1.5s ease-out forwards;
-  animation-delay: 2.5s;
-}
-
-.blog h2 {
-  font-size: 2.5rem;
-  margin-bottom: 1.5rem;
-  color: #ff6347; /* Rojo tomate */
-}
-
-.blog ul {
-  list-style: none;
-  padding: 0;
-}
-
-.blog li {
-  font-size: 1.2rem;
-  margin-bottom: 1rem;
-}
-
-.blog a {
-  color: #ff6347; /* Rojo tomate */
-  text-decoration: none;
-  transition: color 0.3s ease;
-}
-
-.blog a:hover {
-  color: #ff4500; /* Rojo oscuro */
-  text-decoration: underline;
-}
-
-/* Footer */
+/* Estilo del footer */
 footer {
-  background-color: #222;
-  color: #ccc;
-  padding: 2rem 0;
-  text-align: center;
+    background-color: #1a1a1a;
+    padding: 20px 0;
+    text-align: center;
 }
 
 footer p {
-  margin: 0.5rem 0;
-}
-
-footer a {
-  color: #ccc;
-  text-decoration: none;
-}
-
-footer a:hover {
-  text-decoration: underline;
-}
-
-/* Botón flotante de WhatsApp */
-.whatsapp-float {
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  width: 60px;
-  height: 60px;
-  z-index: 999;
-}
-
-.whatsapp-float img {
-  width: 100%;
-  height: auto;
-  border-radius: 50%;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
-  transition: transform 0.3s ease;
-}
-
-.whatsapp-float:hover img {
-  transform: scale(1.1);
+    font-size: 0.9rem;
 }
