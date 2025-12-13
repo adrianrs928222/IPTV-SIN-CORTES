@@ -1,90 +1,197 @@
+/* Reset básico para mejorar consistencia en todos los navegadores */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
+
+html {
+  font-size: 16px;
+}
+
 body {
-  font-family: 'Segoe UI', sans-serif;
+  font-family: 'Arial', sans-serif;
   background-color: #f9f9f9;
-  color: #222;
+  color: #333;
   line-height: 1.6;
+  padding: 0;
+  margin: 0;
 }
-a {
-  text-decoration: none;
-}
+
+/* Estilo para el contenedor central */
 .container {
-  max-width: 960px;
-  margin: auto;
+  max-width: 1200px;
+  margin: 0 auto;
   padding: 2rem;
   text-align: center;
 }
+
+/* Encabezado hero */
 .hero {
-  background: linear-gradient(to right, #000000, #2c2c2c);
+  background: linear-gradient(to right, #2c2c2c, #000);
   color: #fff;
   padding: 5rem 2rem;
+  text-align: center;
 }
+
 .hero h1 {
-  font-size: 2.5rem;
+  font-size: 3rem;
   margin-bottom: 1rem;
 }
+
 .hero p {
   font-size: 1.2rem;
   margin-bottom: 2rem;
 }
-.btn {
-  display: inline-block;
-  padding: 0.9rem 2rem;
+
+.hero .btn-primary {
+  padding: 1rem 2.5rem;
+  background-color: #00d084;
+  color: white;
   border-radius: 50px;
   font-weight: bold;
-  cursor: pointer;
   transition: background 0.3s ease;
 }
-.btn-primary {
-  background: #00d084;
-  color: #fff;
+
+.hero .btn-primary:hover {
+  background-color: #00b373;
 }
-.btn-primary:hover {
-  background: #00b373;
-}
-.btn-secondary {
-  background: #007aff;
-  color: #fff;
-  margin-top: 1.5rem;
-}
-.btn-secondary:hover {
-  background: #005fcc;
-}
+
+/* Estilo para la sección de características */
 .features {
+  background-color: #fff;
   padding: 3rem 2rem;
-  background-color: #ffffff;
 }
+
 .features h2 {
-  font-size: 2rem;
+  font-size: 2.5rem;
   margin-bottom: 1.5rem;
 }
+
 .features ul {
   list-style: none;
   text-align: left;
-  max-width: 500px;
-  margin: auto;
+  max-width: 600px;
+  margin: 0 auto;
 }
+
 .features li {
   font-size: 1.1rem;
-  margin: 0.8rem 0;
-  position: relative;
+  margin: 1rem 0;
   padding-left: 1.5rem;
+  position: relative;
 }
+
 .features li::before {
   content: "✔️";
   position: absolute;
   left: 0;
   top: 0;
 }
+
+/* Estilo para los testimonios */
+.testimonials {
+  background-color: #f7f7f7;
+  padding: 3rem 2rem;
+}
+
+.testimonials h2 {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+}
+
+.testimonial {
+  background-color: #fff;
+  padding: 1.5rem;
+  margin: 1.5rem 0;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.testimonial p {
+  font-style: italic;
+  margin-bottom: 1rem;
+}
+
+.testimonial strong {
+  font-weight: bold;
+}
+
+/* Estilo para la sección de llamada a la acción (CTA) */
+.cta {
+  background-color: #00d084;
+  color: #fff;
+  padding: 3rem 2rem;
+}
+
+.cta h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.cta .btn-primary {
+  padding: 1rem 2.5rem;
+  background-color: #fff;
+  color: #00d084;
+  border-radius: 50px;
+  font-weight: bold;
+  transition: background 0.3s ease;
+}
+
+.cta .btn-primary:hover {
+  background-color: #00b373;
+  color: white;
+}
+
+/* Blog (escalable con más contenido) */
+.blog {
+  padding: 3rem 2rem;
+  background-color: #fff;
+}
+
+.blog h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.blog ul {
+  list-style: none;
+  padding: 0;
+}
+
+.blog li {
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+}
+
+.blog a {
+  color: #00d084;
+  text-decoration: none;
+}
+
+.blog a:hover {
+  text-decoration: underline;
+}
+
+/* Estilo para el pie de página */
 footer {
   background-color: #222;
   color: #ccc;
-  padding: 1rem;
+  padding: 2rem 0;
   text-align: center;
+}
+
+footer p {
+  margin: 0.5rem 0;
+}
+
+footer a {
+  color: #ccc;
+  text-decoration: none;
+}
+
+footer a:hover {
+  text-decoration: underline;
 }
 
 /* Botón flotante de WhatsApp */
@@ -96,13 +203,64 @@ footer {
   height: 60px;
   z-index: 999;
 }
+
 .whatsapp-float img {
   width: 100%;
   height: auto;
   border-radius: 50%;
-  box-shadow: 0 0 10px rgba(0,0,0,0.3);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
   transition: transform 0.3s ease;
 }
+
 .whatsapp-float:hover img {
   transform: scale(1.1);
+}
+
+/* Media Queries para móvil y tabletas */
+@media (max-width: 768px) {
+  .hero h1 {
+    font-size: 2.5rem;
+  }
+
+  .hero p {
+    font-size: 1rem;
+  }
+
+  .features h2 {
+    font-size: 2rem;
+  }
+
+  .cta h2 {
+    font-size: 2rem;
+  }
+
+  .blog h2 {
+    font-size: 2rem;
+  }
+
+  .testimonial {
+    font-size: 1rem;
+  }
+
+  .btn-primary, .btn-secondary {
+    padding: 1rem 2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    padding: 1rem;
+  }
+
+  .hero h1 {
+    font-size: 2rem;
+  }
+
+  .hero p {
+    font-size: 0.9rem;
+  }
+
+  .cta h2 {
+    font-size: 1.8rem;
+  }
 }
