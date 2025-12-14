@@ -1,119 +1,81 @@
-body {
-  margin: 0;
-  font-family: 'Inter', sans-serif;
-  background: #0b1220;
-  color: #ffffff;
-}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>StreamDomus IPTV</title>
+  <meta name="description" content="StreamDomus IPTV - IPTV premium en vivo y on-demand">
 
-a {
-  text-decoration: none;
-  color: inherit;
-}
+  <!-- Fuente -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
 
-.container {
-  width: 90%;
-  max-width: 1100px;
-  margin: auto;
-}
+  <!-- CSS -->
+  <link rel="stylesheet" href="styles.css">
+</head>
 
-.topbar {
-  background: #0f1a31;
-  padding: 12px 0;
-}
+<body>
 
-.nav {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
+<header class="topbar">
+  <div class="container nav">
+    <h1 class="logo">StreamDomus IPTV</h1>
+    <nav>
+      <a href="#inicio">Inicio</a>
+      <a href="#planes">Planes</a>
+      <a href="#contacto">Contacto</a>
+    </nav>
+  </div>
+</header>
 
-#navMenu a {
-  margin-left: 15px;
-  font-weight: 600;
-}
+<main id="inicio" class="container hero">
+  <span class="badge">🔥 IPTV Premium</span>
+  <h2>Todo tu entretenimiento en un solo lugar</h2>
+  <p>Calidad estable, soporte rápido y acceso inmediato.</p>
+</main>
 
-#navToggle {
-  display: none;
-  background: none;
-  color: white;
-  border: none;
-  font-size: 22px;
-}
+<section id="demo" class="container card">
+  <h3>Demo</h3>
+  <div class="video">
+    <iframe
+      src="https://www.youtube.com/embed/dQw4w9WgXcQ"
+      allowfullscreen>
+    </iframe>
+  </div>
+</section>
 
-.hero {
-  padding: 40px 0;
-}
+<section id="planes" class="container">
+  <h3>Planes disponibles</h3>
 
-.badge {
-  background: #1e293b;
-  padding: 6px 14px;
-  border-radius: 20px;
-  display: inline-block;
-  margin-bottom: 10px;
-}
+  <div class="grid">
+    <!-- PLAN ANUAL -->
+    <div class="card highlight">
+      <h4>Plan Anual</h4>
+      <p><strong>Duración:</strong> 1 año</p>
+      <p><strong>Precio:</strong> 50€</p>
 
-.card {
-  background: #111827;
-  padding: 20px;
-  border-radius: 16px;
-  margin: 30px 0;
-}
+      <!-- WHATSAPP DIRECTO -->
+      <a
+        class="btn"
+        href="https://wa.me/34642425345?text=Hola%2C%20quiero%20contratar%20el%20Plan%20Anual.%20Duraci%C3%B3n%3A%201%20a%C3%B1o.%20Precio%3A%2050%E2%82%AC"
+        target="_blank">
+        Elegir plan
+      </a>
+    </div>
+  </div>
+</section>
 
-.video iframe {
-  width: 100%;
-  aspect-ratio: 16 / 9;
-  border: none;
-}
+<section id="contacto" class="container card">
+  <h3>Contacto directo</h3>
+  <a class="btn" href="https://wa.me/34642425345" target="_blank">WhatsApp</a>
+  <a class="btn ghost" href="https://t.me/adrianrs9282" target="_blank">Telegram</a>
+</section>
 
-.grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 20px;
-}
+<!-- BOTONES FLOTANTES -->
+<a class="float wa" href="https://wa.me/34642425345" target="_blank">📞</a>
+<a class="float tg" href="https://t.me/adrianrs9282" target="_blank">💬</a>
 
-.highlight {
-  border: 2px solid #6366f1;
-}
+<footer>
+  <p>© 2025 StreamDomus IPTV</p>
+</footer>
 
-.btn {
-  display: inline-block;
-  background: #6366f1;
-  padding: 12px 20px;
-  border-radius: 14px;
-  font-weight: 700;
-  cursor: pointer;
-  border: none;
-}
-
-.btn.ghost {
-  background: transparent;
-  border: 1px solid #6366f1;
-}
-
-.float {
-  position: fixed;
-  right: 15px;
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
-  background: #1f2937;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 22px;
-}
-
-.float.wa { bottom: 80px; }
-.float.tg { bottom: 20px; }
-
-footer {
-  text-align: center;
-  padding: 20px;
-  color: #9ca3af;
-}
-
-/* MÓVIL */
-@media (max-width: 768px) {
-  #navToggle { display: block; }
-  #navMenu { display: none; }
-}
+</body>
+</html>
