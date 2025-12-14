@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="StreamDomus IPTV - Contenido en vivo y on-demand" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>StreamDomus IPTV</title>
+  <meta name="description" content="StreamDomus IPTV - IPTV premium en vivo y on-demand">
 
-  <!-- FUENTE -->
+  <!-- Fuente -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
 
   <!-- CSS -->
@@ -17,80 +17,62 @@
 
 <header class="topbar">
   <div class="container nav">
-    <h1 class="logo">SD StreamDomus IPTV</h1>
+    <h1 class="logo">StreamDomus IPTV</h1>
     <button id="navToggle">☰</button>
     <nav id="navMenu">
       <a href="#inicio">Inicio</a>
       <a href="#planes">Planes</a>
-      <a href="#faq">FAQ</a>
-      <a href="#contacto">Contactar</a>
+      <a href="#contacto">Contacto</a>
     </nav>
   </div>
 </header>
 
-<main id="inicio" class="hero container">
-  <span class="badge">🔥 IPTV premium • En vivo + On-Demand</span>
-  <h2>Tu entretenimiento en un solo lugar.</h2>
-  <p>Calidad estable, buena selección de contenido y soporte rápido.</p>
-
-  <div class="buttons">
-    <a class="btn" href="#planes">Ver planes</a>
-    <a class="btn ghost" href="#demo">Ver demo</a>
-  </div>
-
-  <ul class="features">
-    <li><strong>HD / FHD</strong> calidad disponible</li>
-    <li><strong>Multi-dispositivo</strong> móvil, TV, PC</li>
-    <li><strong>Soporte</strong> WhatsApp / Telegram</li>
-  </ul>
+<main id="inicio" class="container hero">
+  <span class="badge">🔥 IPTV Premium</span>
+  <h2>Todo tu entretenimiento en un solo lugar</h2>
+  <p>Calidad estable, soporte rápido y acceso inmediato.</p>
 </main>
 
 <section id="demo" class="container card">
   <h3>Demo</h3>
-  <p>Vista previa (reemplaza el iframe por tu player IPTV).</p>
   <div class="video">
     <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" allowfullscreen></iframe>
   </div>
 </section>
 
 <section id="planes" class="container">
-  <h3>Planes</h3>
+  <h3>Planes disponibles</h3>
+
   <div class="grid">
-    <div class="card">
-      <h4>Básico</h4>
-      <p>€9,99 / mes</p>
-    </div>
+    <!-- PLAN ANUAL -->
     <div class="card highlight">
-      <h4>Pro</h4>
-      <p>€14,99 / mes</p>
-    </div>
-    <div class="card">
-      <h4>Familiar</h4>
-      <p>€19,99 / mes</p>
+      <h4>Plan Anual</h4>
+      <p><strong>Duración:</strong> 1 año</p>
+      <p><strong>Precio:</strong> 50€</p>
+
+      <button
+        class="btn"
+        data-plan="Plan Anual"
+        data-duracion="1 año"
+        data-precio="50€">
+        Elegir plan
+      </button>
     </div>
   </div>
 </section>
 
-<section id="faq" class="container">
-  <h3>FAQ</h3>
-  <details>
-    <summary>¿Funciona en Smart TV?</summary>
-    <p>Sí, Smart TV, Android, PC y móvil.</p>
-  </details>
-</section>
-
 <section id="contacto" class="container card">
-  <h3>Contacto</h3>
+  <h3>Contacto directo</h3>
   <a class="btn" href="https://wa.me/34642425345" target="_blank">WhatsApp</a>
   <a class="btn ghost" href="https://t.me/adrianrs9282" target="_blank">Telegram</a>
 </section>
 
-<!-- Botones flotantes -->
+<!-- BOTONES FLOTANTES -->
 <a class="float wa" href="https://wa.me/34642425345" target="_blank">📞</a>
 <a class="float tg" href="https://t.me/adrianrs9282" target="_blank">💬</a>
 
 <footer>
-  <p>© 2025 StreamDomus IPTV</p>
+  <p>© <span id="year"></span> StreamDomus IPTV</p>
 </footer>
 
 <!-- JS -->
